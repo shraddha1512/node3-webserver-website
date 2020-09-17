@@ -11,11 +11,7 @@ const forecast = (latitude, longitude, callback) => {
             callback(undefined, 'Unable to forecast at given location...try some other location!')
         }
         else{
-            callback(undefined, {
-                temp: response.body.current.temperature,
-                prob_of_rain: response.body.current.feelslike,
-                weather : response.body.current.weather_descriptions[0]
-            })
+            callback(undefined, response.body.current.weather_descriptions[0]+' in the morning. It is currently '+response.body.current.temperature+' degress out. There is a '+response.body.current.feelslike+'% chance of rain.')
         }
     })
 
