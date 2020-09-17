@@ -1,5 +1,3 @@
-console.log('Clint Side Javascript is Loaded!!')
-
 
 
 const weatherForm = document.querySelector('form')
